@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>AWS 3-Tier Java App</title>
+</head>
+<body>
+<h1>Welcome to AWS 3-Tier Java App</h1>
+
+<form method="post" enctype="multipart/form-data" action="/app/upload">
+    <input type="file" name="file"/>
+    <button type="submit">Upload to S3</button>
+</form>
+
+<form method="post" action="/app/dynamo">
+    <input type="text" name="id" placeholder="ID"/>
+    <input type="text" name="value" placeholder="Value"/>
+    <button type="submit">Save to DynamoDB</button>
+</form>
+
+</body>
+</html>
